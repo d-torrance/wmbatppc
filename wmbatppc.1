@@ -1,16 +1,35 @@
 .\" Man Page for WMBATPPC
 .\" groff -man -Tascii wmbatppc.1
 .\"
-.TH WMBATPPC 1 "NOVEMBER 2000" Linux "User Manuals"
+.TH WMBATPPC 1 "February 2004" Linux "User Manuals"
 .SH NAME
-wmbatppc
+wmbatppc, batppc \- Battery monitor for Apple laptops using PMU
 .SH SYNOPSIS
 .B wmbatppc
-[\-c command]
 .SH DESCRIPTION
 .B wmbatppc
 displays, as a WindowMaker dockapp, power management information
 on new PowerBooks (aka Pismo) and iBook.
+
+.B batppc
+prints power management information on the console.
+
+Both
+.B wmbatppc
+and
+.B batppc
+retrieve the power management information either from
+.I pmud
+(using a TCP/IP connection on the localhost or a UNIX domain socket)
+or from
+.I /proc/pmu.
+
+By default, both
+.B wmbatppc
+and
+.B batppc
+will use
+.I /proc/pmu.
 .SH OPTIONS
 
 .TP
@@ -23,15 +42,53 @@ This option specifies the X server to contact; see X(1).
 .I \-w
 This option enables the WindowMaker/AfterStep GUI (64*64 pixmap)
 .TP
+.I \-o
+This option disables the On-Screen Display (only available if wmbatppc
+was built with XOSD support).
+.TP
 .I \-x
 This option enables the swallowed application GUI (24*176 pixmap)
 intended for use with the GNOME Panel.
+.TP
+.I \-t
+This option indicates wmbatppc to connect to pmud via the TCP port
+879 on localhost.
+.TP
+.I \-u [PATH]
+This option indicates wmbatppc to connect to pmud via a UNIX domain
+socket. The optional
+.I PATH
+argument can be used to specify the path to the UNIX domain socket
+to use.
+
+.SH OUTPUT
+.B batppc
+outputs a line similar to the following :
+.TP
+PC 100% 80% 01:20
+.br
+P = AC plugged in (\- when not plugged)
+.br
+C = charging (\- when not charging)
+.br
+100% = left battery state (\-\-% when no battery)
+.br
+80%  = right battery state
+.br
+01:20 = time left
+
+Percentages for each battery are coloured in green, yellow or red depending
+on the battery state.
 
 .SH BUGS
 Please report any bugs you may find to:
 .TP
-.B titelou@free.fr 
+.B jb@jblache.org
+
 .SH AUTHOR
-Lou <titelou@free.fr>
+.B wmbatppc
+was originally written by Lou <titelou@free.fr>; it is now maintained
+by Julien BLACHE <jb@jblache.org>.
+
 .SH Homepage
 http://titelou.free.fr/

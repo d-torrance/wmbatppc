@@ -1,3 +1,58 @@
+wmbatppc (2.5-1) unstable; urgency=low
+
+  * New upstream release.
+    + Fixes compilation without XOSD.
+    + Adds a switch to disable XOSD at runtime.
+  * debian/control:
+    + Replaced xlibs-dev B-D by B-D on the individual X libs packages.
+
+ -- Julien BLACHE <jblache@debian.org>  Wed, 13 Oct 2004 19:55:47 +0200
+
+wmbatppc (2.4-2) unstable; urgency=low
+
+  * wmbatppc.c
+    + Fixed compilation without XOSD (closes: #244725).
+  * debian/menu
+    + Fixed the various errors.
+
+ -- Julien BLACHE <jblache@debian.org>  Thu, 20 May 2004 20:30:13 +0200
+
+wmbatppc (2.4-1) unstable; urgency=low
+
+  * New upstream release.
+    + Fixed a crash when xosd cannot set a suitable font (wrt locale and UTF8).
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 22 Feb 2004 13:49:27 +0100
+
+wmbatppc (2.3-1) unstable; urgency=low
+
+  * New upstream release.
+    + Fixed /proc/pmu/ parsing.
+  * Bumped Standards-Version to 3.6.0 (no changes).
+
+ -- Julien BLACHE <jblache@debian.org>  Wed, 23 Jul 2003 16:48:46 +0200
+
+wmbatppc (2.1-1) unstable; urgency=low
+
+  * Small bugfix, this is the first version uploaded since 1.2-1.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 26 Jan 2003 16:16:07 +0100
+
+wmbatppc (2.0-1) unstable; urgency=low
+
+  * New upstream release, a bunch of new features.
+  * New description.
+
+ -- Julien BLACHE <jblache@debian.org>  Wed, 27 Nov 2002 22:09:30 +0100
+
+wmbatppc (1.2-1) unstable; urgency=low
+
+  * Added support for UNIX domain sockets (-u switch).
+  * Added support for /proc/pmu (-p swithc).
+  * Bumped upstream version, at author's request.
+  
+ -- Julien BLACHE <jblache@debian.org>  Wed, 16 Oct 2002 20:40:58 +0200
+
 wmbatppc (1.0-1) unstable; urgency=low
 
   * New upstream release.

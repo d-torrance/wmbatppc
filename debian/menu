@@ -1,2 +1,2 @@
-?package(wmbatppc):needs=wm section=Apps/System\
+?package(wmbatppc):needs="X11" section="Apps/System"\
   title="wmbatppc" command="/usr/bin/wmbatppc -w"
