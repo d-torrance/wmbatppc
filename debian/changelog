@@ -1,0 +1,17 @@
+wmbatppc (1.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Modified the menu to run wmbatppc -w (WindowMaker mode).
+
+ -- Julien BLACHE <jblache@debian.org>  Mon, 29 Oct 2001 13:23:46 +0100
+
+wmbatppc (0.2-1) unstable; urgency=low
+
+  * Initial Release (closes: Bug#114191).
+  * Reworked the description.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun,  2 Sep 2001 21:09:51 +0200
+
+Local variables:
+mode: debian-changelog
+End:

@@ -1,0 +1,22 @@
+Source: wmbatppc
+Section: utils
+Priority: optional
+Maintainer: Julien BLACHE <jblache@debian.org>
+Build-Depends: debhelper (>> 3.0.0), xlibs-dev
+Standards-Version: 3.5.2
+
+Package: wmbatppc
+Architecture: powerpc
+Depends: pmud, ${shlibs:Depends}
+Suggests: wmaker
+Description: Battery monitor for Apple G3/G4 ibooks/powerbooks
+ wmbatppc displays the status of your laptop's battery in a dock icon.
+ This is aimed at PPC laptops, suchs as iBooks and PowerBooks G3 or G4.
+ .
+ The status infos include the charge of the battery, the voltage, whether
+ your laptop is plugged in or not, whether the battery is charging
+ or not, the time remaining (both se and charge) and the level of the
+ battery (it indicates the level of each battery if your laptop has two
+ bays).
+ .
+ This package depends on pmud which provides the informations.

@@ -1,0 +1,2 @@
+?package(wmbatppc):needs=wm section=Apps/System\
+  title="wmbatppc" command="/usr/bin/wmbatppc -w"

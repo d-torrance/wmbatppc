@@ -1,21 +1,24 @@
-#
+# Modified for Debian packaging -- jblache@debian.org
+DESTDIR=
 
+PREFIX= $(DESTDIR)/usr
+CC = /usr/bin/gcc
+INSTALL = /usr/bin/install
 LIBDIR = -L/usr/X11R6/lib
-LIBS   = -lXpm -lXext -lX11 -lm
-FLAGS = -O6
-OBJS =	 \
-		wmgeneral.o \
+LIBS = -lXpm -lXext -lX11 -lm
+FLAGS = -O2
+OBJS = wmgeneral.o
 
 default:all
 
 .c.o:
-	cc -I/usr/X11R6/share/include $(FLAGS) -c -Wall $< -o $*.o
+	$(CC) -I/usr/X11R6/share/include $(FLAGS) -c -Wall $< -o $*.o
 
 wmbatppc.o: wmbatppc.c wmbatppc-master.xpm
-	cc -I/usr/X11R6/share/include $(FLAGS) -c -Wall wmbatppc.c -o $*.o
+	$(CC) -I/usr/X11R6/share/include $(FLAGS) -c -Wall wmbatppc.c -o $*.o
 
 wmbatppc: $(OBJS) wmbatppc.o
-	cc $(FLAGS) -o wmbatppc $(OBJS) -lXext $(LIBDIR) $(LIBS) wmbatppc.o
+	$(CC) $(FLAGS) -o wmbatppc $(OBJS) -lXext $(LIBDIR) $(LIBS) wmbatppc.o
 
 all:: wmbatppc
 
@@ -25,11 +28,9 @@ clean::
 	rm -f *~
 
 install:: wmbatppc
-	strip wmbatppc
-	cp -f wmbatppc /usr/local/bin/
-	chmod 755 /usr/local/bin/wmbatppc
-	chown root:root /usr/local/bin/wmbatppc
-	cp -f wmbatppc.1 /usr/local/man/man1
-	chmod 644 /usr/local/man/man1/wmbatppc.1
-	chown root:root /usr/local/man/man1/wmbatppc.1
+# let dh_strip handle this
+#	strip wmbatppc
+	$(INSTALL) -m 755 wmbatppc $(PREFIX)/bin
+# let dh_installman handle it
+#	$(INSTALL) -m 644 wmbatppc.1 $(PREFIX)/share/man/man1
 	@echo "wmbatppc Installation finished..."
