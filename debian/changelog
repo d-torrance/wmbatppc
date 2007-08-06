@@ -1,3 +1,17 @@
+wmbatppc (2.5-2) unstable; urgency=low
+
+  * debian/control:
+    + Bump Standards-Version to 3.7.2 (no changes).
+  * debian/compat, debian/control:
+    + Switched to DH_COMPAT 5.
+  * debian/rules:
+    + Do not ignore make clean errors.
+  * debian/menu:
+    + Update for the new menu structure.
+    + Added a description.
+
+ -- Julien BLACHE <jblache@debian.org>  Mon, 06 Aug 2007 12:31:45 +0200
+
 wmbatppc (2.5-1) unstable; urgency=low
 
   * New upstream release.
