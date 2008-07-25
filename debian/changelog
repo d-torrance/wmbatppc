@@ -1,3 +1,13 @@
+wmbatppc (2.5-3) unstable; urgency=low
+
+  * debian/control:
+    + Bump Standards-Version to 3.8.0 (no changes).
+    + Fix -1 build-dep.
+  * debian/copyright:
+    + Update and fixes.
+
+ -- Julien BLACHE <jblache@debian.org>  Fri, 25 Jul 2008 14:33:03 +0200
+
 wmbatppc (2.5-2) unstable; urgency=low
 
   * debian/control:

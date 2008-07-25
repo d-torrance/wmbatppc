@@ -4,15 +4,18 @@ Sun,  2 Sep 2001 21:08:22 +0200.
 It was downloaded from http://jblache.nerim.net/wmbatppc/
                        (originally from http://titelou.free.fr/wmbatppc/)
 
-Upstream Authors: Carine BOURNEZ <titelou@free.fr>
-                  Julien BLACHE <jb@jblache.org>
+Upstream Authors:
+    Carine BOURNEZ <titelou@free.fr>
+    Julien BLACHE <jb@jblache.org>
 
 Copyright:
+    Copyright (C) 2000-2002 Carine BOURNEZ
+    Copyright (C) 2002-2004 Julien BLACHE
 
 This program is released under a totally free license, see
 /usr/share/doc/wmbatppc/COPYING for more infos. (in short: do what you want,
 and feel free to send feedback, ideas, bug reports and chocolate to its author)
 
-However, it uses some piece of code from other softwares that are licensed under
-the terms of the GNU General Public License. On Debian systems, the text of
-the GNU General Public License can be found in /usr/share/common-licenses/GPL.
+However, it uses some piece of code from other software licensed under the
+terms of the GNU General Public License. On Debian systems, the text of the
+GNU General Public License can be found in /usr/share/common-licenses/GPL.
