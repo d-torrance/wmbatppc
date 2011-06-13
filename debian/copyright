@@ -14,7 +14,8 @@ Copyright:
 
 This program is released under a totally free license, see
 /usr/share/doc/wmbatppc/COPYING for more infos. (in short: do what you want,
-and feel free to send feedback, ideas, bug reports and chocolate to its author)
+and feel free to send feedback, ideas, bug reports and chocolate to its
+author - though note the address in this file is long outdated)
 
 However, it uses some piece of code from other software licensed under the
 terms of the GNU General Public License. On Debian systems, the text of the
