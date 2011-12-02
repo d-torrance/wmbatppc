@@ -1,3 +1,13 @@
+wmbatppc (2.5-5) unstable; urgency=low
+
+  * Switch to source format 3.0 (quilt).
+
+  * debian/patches/fix_link_order.patch:
+    + Fix link order for ld --as-needed, patch from Colin Watson
+      (closes: #650276). 
+
+ -- Julien BLACHE <jblache@debian.org>  Fri, 02 Dec 2011 13:01:03 +0000
+
 wmbatppc (2.5-4) unstable; urgency=low
 
   * debian/control:

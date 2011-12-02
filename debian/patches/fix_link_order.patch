@@ -1,0 +1,19 @@
+Description: fix link order to list libraries after objects
+ Build fails with ld --as-needed because the libraries are listed after
+ the objects that use them.
+Author: Colin Watson <cjwatson@ubuntu.com>
+Bug-Debian: http://bugs.debian.org/650276
+
+Index: wmbatppc-2.5/Makefile
+===================================================================
+--- wmbatppc-2.5.orig/Makefile	2003-07-23 14:58:42.000000000 +0000
++++ wmbatppc-2.5/Makefile	2011-12-02 10:39:03.000000000 +0000
+@@ -18,7 +18,7 @@
+ 	$(CC) -I/usr/X11R6/share/include $(FLAGS) -c -Wall wmbatppc.c -o $*.o
+ 
+ wmbatppc: $(OBJS) wmbatppc.o
+-	$(CC) $(FLAGS) -o wmbatppc $(OBJS) -lXext $(LIBDIR) $(LIBS) wmbatppc.o
++	$(CC) $(FLAGS) -o wmbatppc wmbatppc.o $(OBJS) -lXext $(LIBDIR) $(LIBS)
+ 
+ all:: wmbatppc
+ 
