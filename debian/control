@@ -1,7 +1,7 @@
 Source: wmbatppc
 Section: utils
 Priority: optional
-Maintainer: Julien BLACHE <jblache@debian.org>
+Maintainer: Doug Torrance <dtorrance@monmouthcollege.edu>
 Build-Depends: debhelper (>= 5), libxosd-dev (>= 2.0.2), libxext-dev, libx11-dev, libxpm-dev
 Standards-Version: 3.9.2
 
