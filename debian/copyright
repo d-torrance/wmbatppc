@@ -1,22 +1,54 @@
-This package was debianized by Julien BLACHE <jblache@debian.org> on
-Sun,  2 Sep 2001 21:08:22 +0200.
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: wmbatppc
+Upstream-Contact: Julien Blache <jb@jblache.org>
+Source: http://jblache.nerim.net/wmbatppc/
 
-It was downloaded from http://jblache.nerim.net/wmbatppc/
-                       (originally from http://titelou.free.fr/wmbatppc/)
+Files: *
+Copyright: 2000-2002 Carine Bournez <titelou@free.fr>
+	   2002-2004 Julien Blache <jb@jblache.org>
+License: DMDZZ
 
-Upstream Authors:
-    Carine BOURNEZ <titelou@free.fr>
-    Julien BLACHE <jb@jblache.org>
+Files: wmgeneral.*
+Copyright: 1998 Martijn Pieterse <pieterse@xs4all.nl>
+License: GPL-2+
 
-Copyright:
-    Copyright (C) 2000-2002 Carine BOURNEZ
-    Copyright (C) 2002-2004 Julien BLACHE
+Files: debian/*
+Copyright: 2001-2011 Julien Blache <jb@jblache.org>
+	   2014 Doug Torrance <dtorrance@monmouthcollege.edu>
+License: GPL-2+
 
-This program is released under a totally free license, see
-/usr/share/doc/wmbatppc/COPYING for more infos. (in short: do what you want,
-and feel free to send feedback, ideas, bug reports and chocolate to its
-author - though note the address in this file is long outdated)
+License: DMDZZ
+ This piece of code is under DMDZZ license (see news:fr.misc.bavardages.linux
+ for details). That means you can do whatever you want with it.
+ (print and eat it, cheat, destroy, scramble with bananas, offer it to
+ your mother for christmas, re-code it with beautiful other 'schligouigouis' in
+ the interface, and so on. You do not need to ask me for permission.
+ If you find it useful or want imrovements, contact me at <titelou@free.fr>.
+ I need a bit of chocolate to produce code, if you feel like feeding a
+ coding geekette, my "in hard life" address is :
+	Carine Bournez
+	Bat. i Appt 234
+	69621 Villeurbanne Cedex
+	FRANCE
 
-However, it uses some piece of code from other software licensed under the
-terms of the GNU General Public License. On Debian systems, the text of the
-GNU General Public License can be found in /usr/share/common-licenses/GPL.
+License: GPL-2+
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'.
