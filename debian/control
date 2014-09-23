@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Doug Torrance <dtorrance@monmouthcollege.edu>
 Build-Depends: debhelper (>= 9), libxosd-dev, libxext-dev, libx11-dev,
  libxpm-dev
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://titelou.free.fr/wmbatppc/
 Vcs-Browser: https://github.com/d-torrance/wmbatppc
 Vcs-Git: https://github.com/d-torrance/wmbatppc.git
