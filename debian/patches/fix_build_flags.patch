@@ -1,0 +1,36 @@
+Description: Fix build flags.
+ In particular,
+ - Respect CFLAGS, CPPFLAGS, and LDFLAGS.
+ - Separate FLAGS into CFLAGS and XOSDFLAGS.
+ - Move -Wall to CFLAGS.
+ - Remove redundant -lXext.
+Author: Doug Torrance <dtorrance@monmouthcollege.edu>
+Last-Update: 2014-12-31
+
+--- a/Makefile
++++ b/Makefile
+@@ -5,19 +5,20 @@
+ CC = /usr/bin/gcc
+ INSTALL = /usr/bin/install
+ LIBS = -lXpm -lXext -lX11 -lm $(shell /usr/bin/xosd-config --libs)
+-FLAGS = -O2 -DENABLE_XOSD $(shell /usr/bin/xosd-config --cflags)
++CFLAGS = -O2 -Wall
++XOSDFLAGS = -DENABLE_XOSD $(shell /usr/bin/xosd-config --cflags)
+ OBJS = wmgeneral.o
+ 
+ default:all
+ 
+ .c.o:
+-	$(CC) $(FLAGS) -c -Wall $< -o $*.o
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $*.o
+ 
+ wmbatppc.o: wmbatppc.c wmbatppc-master.xpm
+-	$(CC) $(FLAGS) -c -Wall wmbatppc.c -o $*.o
++	$(CC) $(XOSDFLAGS) $(CPPFLAGS) $(CFLAGS) -c wmbatppc.c -o $*.o
+ 
+ wmbatppc: $(OBJS) wmbatppc.o
+-	$(CC) $(FLAGS) -o wmbatppc wmbatppc.o $(OBJS) -lXext $(LIBS)
++	$(CC) $(LDFLAGS) -o wmbatppc wmbatppc.o $(OBJS) $(LIBS)
+ 
+ all:: wmbatppc
+ 
