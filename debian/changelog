@@ -1,3 +1,32 @@
+wmbatppc (2.5-6) UNRELEASED; urgency=medium
+
+  * New maintainer (Closes: #688553).
+  * debian/compat
+    - Bump to 9.
+  * debian/control
+    - Bump Standards-Version to 3.9.6; no changes required.
+    - Bump versioned dependency on debhelper to >=9.
+    - Remove unnecessary versioned dependency on libxosd-dev.
+    - Add Homepage and Vcs-* fields.
+  * debian/copyright
+    - Convert to machine-readable format version 1.0.
+  * debian/docs
+    - Remove COPYING to avoid extra-license-file lintian warning.
+  * debian/patches
+    - (remove_X11R_dir.patch) Fix FTBFS on mips* (Closes: #722867).
+    - (fix_build_flags.patch) Respect CFLAGS, CPPFLAGS, and LDFLAGS.
+    - (use_relative_symlinks.patch) Fix installation of batppc command line
+      utility and its manpage.
+    - (fix_-Wunused-*.patch) Fix compiler warnings.
+  * debian/rules
+    - Add get-orig-source target.
+    - Update to use dh.
+    - Add override_dh_auto_build target to use CFLAGS from dpkg-buildflags.
+  * debian/watch
+    - New file; obtained from sepwatch project.
+
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Wed, 31 Dec 2014 10:08:19 -0600
+
 wmbatppc (2.5-5) unstable; urgency=low
 
   * Switch to source format 3.0 (quilt).
