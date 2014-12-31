@@ -1,0 +1,19 @@
+Description: Use relative symbolic links.
+ Otherwise, we get package-contains-broken-symlink Lintian warnings and the
+ batppc command line utility and its manpage will not work.
+Author: Doug Torrance <dtorrance@monmouthcollege.edu>
+Last-Update: 2014-12-31
+
+--- a/Makefile
++++ b/Makefile
+@@ -30,8 +30,8 @@
+ install:: wmbatppc
+ 	$(INSTALL) -d $(PREFIX)/bin
+ 	$(INSTALL) -s -m 755 wmbatppc $(PREFIX)/bin
+-	ln -s $(PREFIX)/bin/wmbatppc $(PREFIX)/bin/batppc
++	ln -sr $(PREFIX)/bin/wmbatppc $(PREFIX)/bin/batppc
+ 	$(INSTALL) -d $(PREFIX)/share/man/man1
+ 	$(INSTALL) -m 644 wmbatppc.1 $(PREFIX)/share/man/man1
+-	ln -s $(PREFIX)/share/man/man1/wmbatppc.1 $(PREFIX)/share/man/man1/batppc.1
++	ln -sr $(PREFIX)/share/man/man1/wmbatppc.1 $(PREFIX)/share/man/man1/batppc.1
+ 	@echo "wmbatppc Installation finished..."
