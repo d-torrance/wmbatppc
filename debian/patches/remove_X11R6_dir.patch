@@ -1,0 +1,34 @@
+Description: Remove references to deprecated X11R6 directories.
+ In particular, use the default search path for linking, which fixes a FTBFS
+ on mips* systems.
+Author: Doug Torrance <dtorrance@monmouthcollege.edu>
+Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=722867
+Last-Update: 2014-12-31
+
+--- a/Makefile
++++ b/Makefile
+@@ -4,7 +4,6 @@
+ PREFIX= $(DESTDIR)/usr
+ CC = /usr/bin/gcc
+ INSTALL = /usr/bin/install
+-LIBDIR = -L/usr/X11R6/lib
+ LIBS = -lXpm -lXext -lX11 -lm $(shell /usr/bin/xosd-config --libs)
+ FLAGS = -O2 -DENABLE_XOSD $(shell /usr/bin/xosd-config --cflags)
+ OBJS = wmgeneral.o
+@@ -12,13 +11,13 @@
+ default:all
+ 
+ .c.o:
+-	$(CC) -I/usr/X11R6/share/include $(FLAGS) -c -Wall $< -o $*.o
++	$(CC) $(FLAGS) -c -Wall $< -o $*.o
+ 
+ wmbatppc.o: wmbatppc.c wmbatppc-master.xpm
+-	$(CC) -I/usr/X11R6/share/include $(FLAGS) -c -Wall wmbatppc.c -o $*.o
++	$(CC) $(FLAGS) -c -Wall wmbatppc.c -o $*.o
+ 
+ wmbatppc: $(OBJS) wmbatppc.o
+-	$(CC) $(FLAGS) -o wmbatppc wmbatppc.o $(OBJS) -lXext $(LIBDIR) $(LIBS)
++	$(CC) $(FLAGS) -o wmbatppc wmbatppc.o $(OBJS) -lXext $(LIBS)
+ 
+ all:: wmbatppc
+ 
