@@ -4,6 +4,11 @@ Homepage: http://titelou.free.fr/wmbatppc
 Installation:
 =============
 
+If you want On-Screen Display when using wmbatppc, you'll need a working
+installation of xosd (>= 2.0.1). If you do not want to use OSD, edit the
+Makefile and comment out the -DENABLE_OSD in the CFLAGS variable.
+
+
 Unzip the source tarball:
 
 	tar xvfz wmbatppc-1.0.tgz
