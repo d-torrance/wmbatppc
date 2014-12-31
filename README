@@ -1,0 +1,65 @@
+wmbatppc 
+Homepage: http://titelou.free.fr/wmbatppc
+
+Installation:
+=============
+
+Unzip the source tarball:
+
+	tar xvfz wmbatppc-1.0.tgz
+
+move on to the fresh source directory:
+
+	cd wmbatppc
+
+then
+	make
+
+and install the program and manpage by
+
+	make install
+
+
+Running wmbatppc:
+=================
+
+To launch wmbatppc, the command is just
+
+	wmbatppc 
+	or 
+	wmbatppc -w for WindowMaker/AfterStep/64*64 pix GUI
+
+	or
+	wmbatppc -x for (ximian) gnome app to swallow into the panel.
+
+Use the command line option '-r <time in milliseconds>' to control the
+frequency of sampling of the processes. Use -display and -geometry
+options in the usual way.
+
+
+Troubleshooting:
+================
+
+wmbatppc was tested with YellowDog Linux cs1.2 on a PowerBook 2000
+(Pismo) and one battery (both bays).
+
+If wmbatppc doesn't run, make sure that
+
+1) your machine has the appropriate keylargo :-)
+
+2) you have pmud daemon installed and running correctly on port 879.
+
+3) in some case, you may have to restart pmud just after make install,
+before launching wmbatppc. This occurs especially when upgrading wmbatppc.
+
+Please report any bugs you might find to  
+
+	titelou@free.fr
+
+
+Acknowledgments:
+================
+
+Thanks to the authors of wmwave and gkrell-pmu for their code,
+to Steffen Reith for his packaging effort ;-)
+Thanks to jb for his debian packaging.
