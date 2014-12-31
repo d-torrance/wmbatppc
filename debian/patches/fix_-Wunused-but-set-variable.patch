@@ -1,0 +1,23 @@
+Description: Fix -Wunused-but-set-variable compiler warning.
+Author: Doug Torrance <dtorrance@monmouthcollege.edu>
+Last-Update: 2014-12-31
+
+--- a/wmbatppc.c
++++ b/wmbatppc.c
+@@ -578,7 +578,6 @@
+ 
+ void DisplayBat(void)
+ {	
+-  int keylargo;
+   unsigned int par = 0;
+   int hour = 0;
+   int min = 0;
+@@ -589,7 +588,7 @@
+   
+   sys_pmu.show_charge_time = 1;
+   
+-  keylargo = keylargo_identify(); /* TODO : use this detection */
++  keylargo_identify();
+ 
+   sys_pmu.read_pmu();
+ 

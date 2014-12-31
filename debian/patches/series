@@ -2,3 +2,5 @@ fix_link_order.patch
 remove_X11R6_dir.patch
 fix_build_flags.patch
 use_relative_symlinks.patch
+fix_-Wunused-but-set-variable.patch
+fix_-Wunused-result.patch

@@ -1,0 +1,26 @@
+Description: Fix -Wunused-result compiler warning.
+Author: Doug Torrance <dtorrance@monmouthcollege.edu>
+Last-Update: 2014-12-31
+
+--- a/wmbatppc.c
++++ b/wmbatppc.c
+@@ -307,13 +307,18 @@
+ {
+   FILE *fd;
+   char buf[25];
++  int f;
+   if (!(fd = fopen ("/proc/device-tree/pci/mac-io/media-bay/compatible", "ro")))
+     return KL_IBOOK;
+   /* 
+    * no media-bay.  definately an iBook...
+    * or a Pismo running a kernel without OF-devtree support...
+    */
+-  fscanf (fd, "%s", buf);
++  f = fscanf (fd, "%s", buf);
++  if (f == EOF) {
++    fprintf(stderr, "fscanf() failed\n");
++    exit(1);
++  }
+   fclose (fd);
+   if (!strcmp ("keylargo-media-bay", buf))	// only the pismo should have one
+     return KL_PISMO;	// has one, its a pismo
