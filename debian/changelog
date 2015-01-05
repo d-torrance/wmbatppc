@@ -1,4 +1,4 @@
-wmbatppc (2.5-6) UNRELEASED; urgency=medium
+wmbatppc (2.5-6) unstable; urgency=medium
 
   * New maintainer (Closes: #688553).
   * debian/compat
@@ -12,6 +12,8 @@ wmbatppc (2.5-6) UNRELEASED; urgency=medium
     - Convert to machine-readable format version 1.0.
   * debian/docs
     - Remove COPYING to avoid extra-license-file lintian warning.
+  * debian/dirs
+    - Remove unnecessary file.
   * debian/patches
     - (remove_X11R_dir.patch) Fix FTBFS on mips* (Closes: #722867).
     - (fix_build_flags.patch) Respect CFLAGS, CPPFLAGS, and LDFLAGS.
@@ -22,6 +24,8 @@ wmbatppc (2.5-6) UNRELEASED; urgency=medium
     - Add get-orig-source target.
     - Update to use dh.
     - Add override_dh_auto_build target to use CFLAGS from dpkg-buildflags.
+    - Append -Wl,--as-needed to LDFLAGS to avoid dpkg-shlibdeps useless
+      dependency warnings.
   * debian/watch
     - New file; obtained from sepwatch project.
 
