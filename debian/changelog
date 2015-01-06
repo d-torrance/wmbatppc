@@ -34,114 +34,110 @@ wmbatppc (2.5-6) unstable; urgency=medium
 wmbatppc (2.5-5) unstable; urgency=low
 
   * Switch to source format 3.0 (quilt).
-
-  * debian/patches/fix_link_order.patch:
-    + Fix link order for ld --as-needed, patch from Colin Watson
-      (closes: #650276). 
+  * debian/patches/fix_link_order.patch
+    - Fix link order for ld --as-needed, patch from
+      Colin Watson (Closes: #650276).
 
  -- Julien BLACHE <jblache@debian.org>  Fri, 02 Dec 2011 13:01:03 +0000
 
 wmbatppc (2.5-4) unstable; urgency=low
 
-  * debian/control:
-    + Bump Standards-Version to 3.9.2 (no changes).
-    + Add ${misc:Depends}. 
+  * debian/control
+    - Bump Standards-Version to 3.9.2 (no changes required).
+    - Add ${misc:Depends}.
 
  -- Julien BLACHE <jblache@debian.org>  Mon, 13 Jun 2011 11:09:16 +0200
 
 wmbatppc (2.5-3) unstable; urgency=low
 
-  * debian/control:
-    + Bump Standards-Version to 3.8.0 (no changes).
-    + Fix -1 build-dep.
-  * debian/copyright:
-    + Update and fixes.
+  * debian/control
+    - Bump Standards-Version to 3.8.0 (no changes required).
+    - Fix -1 build-dep.
+  * debian/copyright
+    - Update and fixes.
 
  -- Julien BLACHE <jblache@debian.org>  Fri, 25 Jul 2008 14:33:03 +0200
 
 wmbatppc (2.5-2) unstable; urgency=low
 
-  * debian/control:
-    + Bump Standards-Version to 3.7.2 (no changes).
-  * debian/compat, debian/control:
-    + Switched to DH_COMPAT 5.
-  * debian/rules:
-    + Do not ignore make clean errors.
+  * debian/control
+    - Bump Standards-Version to 3.7.2 (no changes required).
+  * debian/compat, debian/control
+    - Switch to DH_COMPAT 5.
+  * debian/rules
+    - Do not ignore make clean errors.
   * debian/menu:
-    + Update for the new menu structure.
-    + Added a description.
+    - Update for the new menu structure.
+    - Add a description.
 
  -- Julien BLACHE <jblache@debian.org>  Mon, 06 Aug 2007 12:31:45 +0200
 
 wmbatppc (2.5-1) unstable; urgency=low
 
   * New upstream release.
-    + Fixes compilation without XOSD.
-    + Adds a switch to disable XOSD at runtime.
-  * debian/control:
-    + Replaced xlibs-dev B-D by B-D on the individual X libs packages.
+    - Fixes compilation without XOSD.
+    - Adds a switch to disable XOSD at runtime.
+  * debian/control
+    - Replace xlibs-dev B-D with B-D on the individual X libs packages.
 
  -- Julien BLACHE <jblache@debian.org>  Wed, 13 Oct 2004 19:55:47 +0200
 
 wmbatppc (2.4-2) unstable; urgency=low
 
   * wmbatppc.c
-    + Fixed compilation without XOSD (closes: #244725).
+    - Fix compilation without XOSD (Closes: #244725).
   * debian/menu
-    + Fixed the various errors.
+    - Fix the various errors.
 
  -- Julien BLACHE <jblache@debian.org>  Thu, 20 May 2004 20:30:13 +0200
 
 wmbatppc (2.4-1) unstable; urgency=low
 
   * New upstream release.
-    + Fixed a crash when xosd cannot set a suitable font (wrt locale and UTF8).
+    - Fix a crash when xosd cannot set a suitable font (wrt locale and UTF8).
 
  -- Julien BLACHE <jblache@debian.org>  Sun, 22 Feb 2004 13:49:27 +0100
 
 wmbatppc (2.3-1) unstable; urgency=low
 
   * New upstream release.
-    + Fixed /proc/pmu/ parsing.
-  * Bumped Standards-Version to 3.6.0 (no changes).
+    - Fix /proc/pmu/ parsing.
+  * Bump Standards-Version to 3.6.0 (no changes required).
 
  -- Julien BLACHE <jblache@debian.org>  Wed, 23 Jul 2003 16:48:46 +0200
 
 wmbatppc (2.1-1) unstable; urgency=low
 
+  * New upstream release.
   * Small bugfix, this is the first version uploaded since 1.2-1.
 
  -- Julien BLACHE <jblache@debian.org>  Sun, 26 Jan 2003 16:16:07 +0100
 
 wmbatppc (2.0-1) unstable; urgency=low
 
-  * New upstream release, a bunch of new features.
-  * New description.
+  * New upstream release.
+  * Update description.
 
  -- Julien BLACHE <jblache@debian.org>  Wed, 27 Nov 2002 22:09:30 +0100
 
 wmbatppc (1.2-1) unstable; urgency=low
 
-  * Added support for UNIX domain sockets (-u switch).
-  * Added support for /proc/pmu (-p swithc).
-  * Bumped upstream version, at author's request.
-  
+  * New upstream release.
+    - Add support for UNIX domain sockets (-u switch).
+    - Add support for /proc/pmu (-p switch).
+  * Bump upstream version, at author's request.
+
  -- Julien BLACHE <jblache@debian.org>  Wed, 16 Oct 2002 20:40:58 +0200
 
 wmbatppc (1.0-1) unstable; urgency=low
 
   * New upstream release.
-  * Modified the menu to run wmbatppc -w (WindowMaker mode).
+    - Modify the menu to run wmbatppc -w (WindowMaker mode).
 
  -- Julien BLACHE <jblache@debian.org>  Mon, 29 Oct 2001 13:23:46 +0100
 
 wmbatppc (0.2-1) unstable; urgency=low
 
-  * Initial Release (closes: Bug#114191).
-  * Reworked the description.
+  * Initial release (Closes: 114191).
 
  -- Julien BLACHE <jblache@debian.org>  Sun,  2 Sep 2001 21:09:51 +0200
-
-Local variables:
-mode: debian-changelog
-End:
